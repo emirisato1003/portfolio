@@ -1,0 +1,17 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Project Name",
+            "description": "Brief description",
+            "technologies": [
+                "React",
+                "Node.js"
+            ],
+            "liveUrl": "https://example.com",
+            "githubUrl": "https://github.com/username/repo",
+            "image": "/images/project1.jpg",
+            "featured": true
+        }
+    ]
+}
