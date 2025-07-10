@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Projects() {
     const [projects, setProjects] = useState(projectsData.projects);
+    
     const projectsEl = projects.map(project => (
         <article key={project.id} className='project'>
             <div className="thumbnail">
@@ -12,7 +13,7 @@ export default function Projects() {
             <div className="linkContainer">
                 <h1>{project.title}</h1>
                 <p>{project.context}</p>
-                <Link to={`/projects/${project.id}`}>learn more</Link>
+                <Link to={`/projects/${project.id}`}><button>learn more</button></Link>
             </div>
         </article>
     )
