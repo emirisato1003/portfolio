@@ -6,9 +6,9 @@ import Project from './page/Project';
 import About from './page/About';
 import Contact from './page/Contact';
 import Layout from './Layout/Layout';
-import NotFound from './page/NotFound'
-function App() {
+import NotFound from './page/NotFound';
 
+function App() {
 
   return (
     <>

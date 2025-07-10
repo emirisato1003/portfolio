@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 export default function Projects() {
     const [projects, setProjects] = useState(projectsData.projects);
-
     const projectsEl = projects.map(project => (
         <article key={project.id} className='project'>
             <div className="thumbnail">
