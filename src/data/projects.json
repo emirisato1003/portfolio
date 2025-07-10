@@ -1,0 +1,275 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Art image gallery",
+            "context": "This application is developed with PHP. Users are able to login, upload images, view a gallery of uploaded images, and delete their own images.",
+            "description": "This PHP application allows users to register, log in, upload images, view a gallery of uploaded images, and delete their own images.",
+            "overview": "A secure web application that allows users to manage and view an image gallery. Built with PHP, this application implements user authentication and file upload functionality while maintaining a professional appearance.",
+            "videos": [],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "PHP",
+                "MySQL",
+                "Bootstrap"
+            ],
+            "liveUrl": "",
+            "githubUrl": "https://github.com/emirisato1003/ArtImageGalleryApp.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": false
+        },
+        {
+            "id": 2,
+            "title": "travel blog app",
+            "context": "This is Blog application developed by using PHP, HTML, and CSS.",
+            "description": "The Travel Blog app lets users share travel experiences, create blog posts, and explore stories from others. It features an intuitive interface for easy navigation and discovery.",
+            "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aliquam nemo beatae omnis quod et laboriosam repudiandae aspernatur voluptates tenetur. Id necessitatibus velit reprehenderit nemo eos sunt corrupti doloribus nisi!",
+            "videos": [],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "PHP",
+                "MySQL",
+                "Bootstrap",
+                "Figma"
+            ],
+            "liveUrl": "",
+            "githubUrl": "https://github.com/emirisato1003/blog_app.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": false
+        },
+        {
+            "id": 3,
+            "title": "new york times article",
+            "context": "Leveraging the power of the NYT API, this app offers real-time updates on various news categories. Built with HTML, CSS, and vanilla JavaScript.",
+            "description": "This application was built as a class final project. Developed with JavaScript using the NYT API. Users are able to get the most recent news articles from the New York Times. It also allows selecting topics without reloading the page.",
+            "overview": "This application have developed a web page that displays news stories from the New York Times. The stories will be retrieved using JavaScript fetch() (AJAX) calls to the application programming interface (API) provided by the New York Times. this page allow users to display news from sections from the Top Stories API",
+            "videos": [],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Bootstrap",
+                "GIT",
+                "API"
+            ],
+            "liveUrl": "https://nyt-article-project.netlify.app/",
+            "githubUrl": "https://github.com/emirisato1003/NYT_Article.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": false
+        },
+        {
+            "id": 4,
+            "title": "CS50's Web Programming with Python and JavaScript",
+            "context": "Applications have been developed utilizing the Python Django framework for backend development and JavaScript for frontend functionality.",
+            "description": "There are three demo videos for projects: Wiki, Mail, and Network. These apps are built with Python, JavaScript, and SQL using frameworks like Django and Bootstrap.",
+            "overview": "These projects are bases on CS50's Web Programming with python and JavaScript. The course topics include database design, scalability, security, and user experience. There are three videos of the main projects: wiki, Mail, and Network.",
+            "videos": [
+                "https://youtu.be/bzF4tCd12as",
+                "https://youtu.be/3ZA4oWJpSt0",
+                "https://youtu.be/5L8lh1Vgoa0"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Python",
+                "Django",
+                "Django Admin",
+                "Bootstrap",
+                "REST API",
+                "GIT",
+                "Figma"
+            ],
+            "liveUrl": "",
+            "githubUrl": "",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": false
+        },
+        {
+            "id": 5,
+            "title": "Visualist - Social Media App",
+            "context": "This application is a part of CS50's Web Programming with Python and JavaScript. It allows interact with users by following and liking each other's posts. Users are also able to edit own profile and save user's posts.",
+            "description": "This project is a Django-based social media web application that allows users to create profiles, make posts, follow other users, and interact with content through likes and saves.",
+            "overview": "This project features advanced user interactions, including a dynamic following/follower system and post engagement options such as likes and saves. Users have custom profiles with details. The platform also offers comprehensive post management, allowing users to create and edit content. With a responsive design that blends server-side rendering and client-side interactivity, the application ensures a smooth and engaging user experience.",
+            "videos": [
+                "https://youtu.be/ztySOiZp678"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Python",
+                "Django",
+                "Django Admin",
+                "Bootstrap",
+                "REST API",
+                "GIT",
+                "Figma"
+            ],
+            "liveUrl": "",
+            "githubUrl": "https://github.com/emirisato1003/Social_media_app.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": true
+        },
+        {
+            "id": 6,
+            "title": "Auction - CS50W",
+            "context": "This project is part of CS50’s Web Programming with Python and JavaScript course. This application enables users to create, bid, and comment on auction listings.",
+            "description": "This project is an implementation of an auction site using Django. The project includes an app called auctions that enables users to create, bid, and comment on auction listings.",
+            "overview": "This application is an online auction platform built with Django. It allows users to create, bid on, and comment on auction listings. Key features include user authentication, a dynamic watchlist, category-based listing organization, and an admin interface for managing listings, bids, and comments. The platform ensures seamless interaction for buyers and sellers in a user-friendly environment.",
+            "videos": [
+                "https://youtu.be/rayOGJJA_H0"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Python",
+                "Django",
+                "Django Admin",
+                "SQLite",
+                "Bootstrap",
+                "REST API",
+                "GIT"
+            ],
+            "liveUrl": "",
+            "githubUrl": "https://github.com/emirisato1003/Auction_cs50w.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": true
+        },
+        {
+            "id": 7,
+            "title": "Chef Claude App",
+            "context": "This application, built with React.js and powered by the Claude AI API, enables users to input ingredients and generate personalized recipes effortlessly with the help of AI.",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in numquam incidunt earum quaerat cum fuga, atque similique natus nobis sit.",
+            "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias tenetur minus quaerat aliquid, aut provident blanditiis, deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae mollitia laborum corrupti ullam rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias tenetur minus quaerat aliquid, aut provident blanditiis, deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae mollitia laborum corrupti ullam rem?",
+            "videos": [],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "npm",
+                "Vite",
+                "API",
+                "GIT",
+                "AI"
+            ],
+            "liveUrl": "https://chef-claude-recipe-app.netlify.app/",
+            "githubUrl": "https://github.com/emirisato1003/Chef-Claude-app.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": true
+        },
+        {
+            "id": 8,
+            "title": "Tenzies App",
+            "context": "This React-based application, Tenzies, is a dice game where users roll dice until all values match. Players can freeze individual dice between rolls to strategize and aim for the lowest roll count.",
+            "description": "This is a dice game where users roll dice until all values match. Players can freeze individual dice between rolls to strategize and aim for the lowest roll count.",
+            "overview": "This application, Tenzies, is a React-based interactive dice game. The objective is to roll the dice until all values are the same. Users can click on individual dice to freeze their values, allowing for strategic gameplay between rolls. The app features a roll counter to track attempts and a celebratory animation upon completing the game. With its clean UI and simple yet engaging gameplay, Tenzies is designed to provide an enjoyable and interactive experience.",
+            "videos": [],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "npm",
+                "Vite",
+                "GIT",
+                "Figma"
+            ],
+            "liveUrl": "https://react-app-tenziees.netlify.app/",
+            "githubUrl": "https://github.com/emirisato1003/tenzies-app.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": false
+        },
+        {
+            "id": 9,
+            "title": "Assembly EndGame",
+            "context": "This app is a word-guessing game called \"Assembly: Endgame\". Players guess words to protect the programming world from the fictional threat of \"Assembly.\" This is React-based app with a clean UI, thematic hints, and engaging victory or loss animations.",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in numquam incidunt earum quaerat cum fuga, atque similique natus nobis sit.",
+            "overview": "\"Assembly: Endgame\" is an interactive word-guessing game designed to engage players with programming-related vocabulary. The game challenges users to guess a hidden word within a limited number of attempts, offering hints related to popular programming languages and technologies such as HTML, CSS, JavaScript, Python, and more. The interface includes colored buttons for letters, visual feedback for correct and incorrect guesses, and themed phrases to add context to each word. If players guess the word correctly, they win with a celebratory animation, while incorrect guesses result in a \"Game Over\" screen. The project combines educational elements with entertainment, making it appealing for coding enthusiasts and casual players alike.",
+            "videos": [],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "npm",
+                "Vite",
+                "NPM Library",
+                "Figma"
+            ],
+            "liveUrl": "https://guessting-game-app.netlify.app/",
+            "githubUrl": "https://github.com/emirisato1003/assembly-endgame.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": false
+        },
+        {
+            "id": 10,
+            "title": "My To-Do App",
+            "context": "This is To-do app built with native React. Users can create, edit, and delete to-do list. There is also filtering and search features.",
+            "description": "To-do app with native React. Users can create todo list. The features of this app are CRUD system, filtering, searching functionality, and pagination.",
+            "overview": "This to-do list application offers a simple and efficient way for users to manage their daily tasks. Users can add new items to the list, edit existing ones, and delete tasks that are no longer needed. To help with organization, tasks can be sorted in descending order of priority, ensuring that the most important items are addressed first. Additionally, users can mark tasks as completed, making it easy to track progress and stay on top of responsibilities. The intuitive interface and core features make this application a practical tool for improving productivity and task management.",
+            "videos": [],
+            "technologies": [
+                "HTML",
+                "CSS / CSS Modules/ Styled Components",
+                "JavaScript",
+                "React",
+                "npm",
+                "Vite",
+                "REST API",
+                "API",
+                "React Router",
+                "Environment Variables", 
+                "GIT",
+                "GitHub",
+                "Responsive Design"
+            ],
+            "liveUrl": "https://todo-list-neon-seven-17.vercel.app/",
+            "githubUrl": "https://github.com/emirisato1003/todo-list.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": true
+        },
+        {
+            "id": 11,
+            "title": "#FITLIFE",
+            "context": "#FITLIFE is a fitness application built with native React. There are 1000+ exercises data in this application. users can see each workout's tutorials and access to the related workouts and additional video guidance through Youtube.",
+            "description": "A fitness application that uses can access anywhere and anytime. Users can access tutorial videos and instructions. Mobile-responsive design.",
+            "overview": "This fitness app helps users discover exercise tutorials and build their workout routines. Users can search for exercises in three ways: by exercise name, equipment type, or target muscle group. The app features a mobile-friendly design, making it perfect for use at the gym or any workout location. Whether you're planning your routine at home or need a quick tutorial reminder during your workout.",
+            "videos": [],
+            "technologies": [
+                "HTML",
+                "CSS / CSS Modules",
+                "JavaScript",
+                "React",
+                "npm",
+                "Vite",
+                "API",
+                "MirageJS",
+                "React Router",
+                "Environment Variables",
+                "GIT",
+                "GitHub",
+                "Responsive Design"
+            ],
+            "liveUrl": "https://jay-fitness-app.vercel.app/",
+            "githubUrl": "https://github.com/emirisato1003/jay-fitness-app.git",
+            "pageImage": "/images/project1.jpg",
+            "thumbnail": "/images/thumbnail1.png",
+            "featured": true
+        }
+    ]
+}
