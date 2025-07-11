@@ -10,10 +10,12 @@ export default function Header() {
     return (
         <header>
             <nav>
-                <div className={styles.headerLogoContainer}>
-                    <Link to='/'><img src={profile} alt="profile icon" className={styles.headerLogo} /></Link>
-                    <Link to='/'>Emiri Sato</Link>
-                </div>
+                <Link to='/' className={styles.logoContainer}>
+                    <div className={styles.logoImgContainer}>
+                        <img src={profile} alt="profile icon" className={styles.headerLogo} />
+                    </div>
+                    <span className={styles.logoSub}>Emiri Sato</span>
+                </Link>
                 <div className={styles.headerNav}>
                     <NavLink style={({ isActive }) => isActive ? activeStyles : null} to='/projects'>Projects</NavLink>
                     <NavLink style={({ isActive }) => isActive ? activeStyles : null} to='/about'>About</NavLink>

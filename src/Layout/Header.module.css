@@ -1,5 +1,6 @@
 header{
-    height: 60px;
+    margin-inline: 1.6em;
+    margin-block: 1em;
 }
 
 nav{
@@ -8,18 +9,58 @@ nav{
     align-items: center;
 }
 
-.headerLogoContainer{
+.logoContainer{
     display: flex;
     align-items: center;
+    cursor: pointer;
     gap: 10px;
+    transition: color .3s;
+    margin: 6px 10px 0 0;
 }
 
-.headerLogoContainer img{
-    margin: 5px;
+a.logoContainer{
+    color: var(--dark-text-color);
+    text-decoration: none;
+}
+
+.logoContainer:hover{
+    color: var(--primary-color);
+}
+
+.logoImgContainer{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
     overflow: hidden;
-    max-height: 50px;
-    max-width: 50px;
-    object-fit:cover;
-    object-position: 80% 100%;
-    clip-path: circle(50%);
+}
+
+.logoImgContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
+}
+
+.logoSub{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.headerNav{
+    display: flex;
+    gap: 5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.headerNav a{
+    color: var(--dark-text-color);
+    text-decoration: none;
+}
+
+.headerNav a:hover{
+    color: var(--primary-color);
 }
