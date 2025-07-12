@@ -16,8 +16,8 @@
             ],
             "liveUrl": "",
             "githubUrl": "https://github.com/emirisato1003/ArtImageGalleryApp.git",
-            "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "pageImage": "",
+            "thumbnail": "images/art_image_gallery_screenshots.png",
             "featured": false
         },
         {
@@ -38,7 +38,7 @@
             "liveUrl": "",
             "githubUrl": "https://github.com/emirisato1003/blog_app.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/travel_blog_screenshots.jpg",
             "featured": false
         },
         {
@@ -59,7 +59,7 @@
             "liveUrl": "https://nyt-article-project.netlify.app/",
             "githubUrl": "https://github.com/emirisato1003/NYT_Article.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/nyt-article-screenshots.png",
             "featured": false
         },
         {
@@ -87,8 +87,8 @@
             ],
             "liveUrl": "",
             "githubUrl": "",
-            "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "pageImage": "images/cs50w.png",
+            "thumbnail": "images/cs50w.png",
             "featured": false
         },
         {
@@ -115,7 +115,7 @@
             "liveUrl": "",
             "githubUrl": "https://github.com/emirisato1003/Social_media_app.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/social_media_app_screenshots.png",
             "featured": true
         },
         {
@@ -142,7 +142,7 @@
             "liveUrl": "",
             "githubUrl": "https://github.com/emirisato1003/Auction_cs50w.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/auction_screenshots.jpg",
             "featured": true
         },
         {
@@ -166,7 +166,7 @@
             "liveUrl": "https://chef-claude-recipe-app.netlify.app/",
             "githubUrl": "https://github.com/emirisato1003/Chef-Claude-app.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/chef-claude-app-screenshots.png",
             "featured": true
         },
         {
@@ -189,7 +189,7 @@
             "liveUrl": "https://react-app-tenziees.netlify.app/",
             "githubUrl": "https://github.com/emirisato1003/tenzies-app.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/tenzies-screenshots.gif",
             "featured": false
         },
         {
@@ -212,7 +212,7 @@
             "liveUrl": "https://guessting-game-app.netlify.app/",
             "githubUrl": "https://github.com/emirisato1003/assembly-endgame.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/assembly-endgame-screenshots.gif",
             "featured": false
         },
         {
@@ -240,7 +240,7 @@
             "liveUrl": "https://todo-list-neon-seven-17.vercel.app/",
             "githubUrl": "https://github.com/emirisato1003/todo-list.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/todoList.png",
             "featured": true
         },
         {
@@ -268,7 +268,7 @@
             "liveUrl": "https://jay-fitness-app.vercel.app/",
             "githubUrl": "https://github.com/emirisato1003/jay-fitness-app.git",
             "pageImage": "/images/project1.jpg",
-            "thumbnail": "/images/thumbnail1.png",
+            "thumbnail": "images/fitlife.png",
             "featured": true
         }
     ]
