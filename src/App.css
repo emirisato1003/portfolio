@@ -58,26 +58,41 @@ h1, h2, h3, h4, h5, h6 {
     --dark-text-color: #3c3435;
 }
 
-.gradient{
-    background: #005AA7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
+/***general styling***/
 
 button{
     color: var(--light-text-color);
     background-color: var(--primary-color);
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     height: 45px;
     width: 180px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     transition: all .3s ease;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 button:hover{
     transform: translateY(-3px);
+}
+
+.social-links{
+    display: flex;
+}
+
+.social-icon-link{
+    border: 2px solid var(--light-text-color);
+}
+
+.social-icon-link:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon{
+    margin: 1em;
+    width: 25px;
+    height: 25px;
+    color: var(--light-text-color);
 }

@@ -1,0 +1,57 @@
+
+main{
+    text-align: center;
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 350px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero h1{
+    font-size: clamp(3rem, 4vw, 6rem);
+    text-transform: uppercase;
+}
+
+.hero h2{
+    /* font-size: 1.3rem; */
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-weight: 400;
+    margin: 3rem 0px;
+}
+
+.heroContent{
+    max-width: 90em;
+}
+
+button.ctaBtn{
+    background-color: var(--background-color);
+    color: var(--dark-text-color);
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    width: 300px;
+    height: 55px;
+    margin-bottom: 5em;
+}
+
+.scrollContainer{
+    max-width: 100em;
+    border: 1px solid #eee;
+}
+
+.featuredProjects{
+    display: flex;
+}
+
+.featuredProjectBox{
+    width: 280px;
+}
