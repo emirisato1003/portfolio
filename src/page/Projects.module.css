@@ -1,4 +1,57 @@
+.projectHeading{
+    text-align: center;
+    margin-bottom: 10em;
+}
+
+.projectHeading span{
+    color: #777;
+    font-size: 1.2rem;
+}
 
 .projectContainer{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 3em;
+    margin-bottom: 6em;
+}
+
+.projectImgContainer{
+    overflow: hidden;
+}
+
+.projectImgContainer img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.linkContents{
     display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: start;
+}
+
+.linkContents h2{
+    font-size: clamp(1.2rem, 3vh, 2rem);
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+
+.linkContents p{
+    color: gray;
+    font-size: clamp(1rem, 5vh, 1.1rem);
+    max-width: 60em;
+    line-height: 1.7;
+    margin-bottom: 3em;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .projectContainer{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .linkContents{
+        align-items: center;
+    }
 }
