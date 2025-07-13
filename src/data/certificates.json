@@ -1,0 +1,97 @@
+{
+    "certificates": [
+        {
+            "id": 1,
+            "title": "MTA: Introduction to Programming Using HTML and CSS",
+            "organization": "Microsoft",
+            "issuedDate": "2021-03-01",
+            "credential": "https://www.credly.com/badges/ae9e3741-44eb-43b9-9b29-660f255b6604?source=linked_in_profile",
+            "skills": [
+                "Cascading style sheets (CSS)",
+                "HTML"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "CS50P - Introduction to Programming with Python",
+            "organization": "Harvard CS50",
+            "issuedDate": "2023-12-01",
+            "credential": "https://certificates.cs50.io/a3a87460-ecd6-421e-93c9-9ce697f012f2.pdf?size=letter",
+            "skills": [
+                "Python",
+                "Object-Oriented Programming (OOP)"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "CS50W - Web Programming Python and JavaScript",
+            "organization": "Harvard CS50",
+            "issuedDate": "2024-09-01",
+            "credential": "https://certificates.cs50.io/37b21afa-b2cd-4b6e-82df-d16d1fabcbe1.pdf?size=letter",
+            "skills": [
+                "JavaScript",
+                "Python",
+                "User Experience (UX)",
+                "User Interface (UI)",
+                "Figma",
+                "HTML",
+                "CSS",
+                "Django",
+                "Django Admin"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "React",
+            "organization": "Scrimba",
+            "issuedDate": "2025-01-01",
+            "credential": "https://scrimba.com/certificate-cert2uNjfK9m1mhDZLiWFKZnFiPxv64jm8vyMFE",
+            "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "Figma",
+                "Vite",
+                "npm"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Code The Dream - software development in a front end program",
+            "organization": "Code The Dream",
+            "issuedDate": "2025-06-01",
+            "credential": "credentials/ctd_certificate.png",
+            "skills": [
+                "CSS",
+                "HTML",
+                "JavaScript",
+                "React",
+                "npm",
+                "Vite",
+                "React Router 6",
+                "Rest API",
+                "API"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Advanced React",
+            "organization": "Scrimba",
+            "issuedDate": "2025-07-01",
+            "credential": "https://scrimba.com/certificate-cert24zAwJ77fGQGWRk2C7q4JJFd9KquVxPNkXBoK",
+            "skills": [
+                "CSS",
+                "HTML",
+                "JavaScript",
+                "React",
+                "npm",
+                "Vite",
+                "React Router 6",
+                "Rest API",
+                "API",
+                "Firebase"
+            ]
+        }
+    ]
+}

@@ -1,19 +1,4 @@
 
-/* main{
-    text-align: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 350px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-} */
-
 .hero h1{
     font-size: clamp(3rem, 4vw, 6rem);
     text-transform: uppercase;

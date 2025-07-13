@@ -47,6 +47,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /*** typography system ***/
 
+h1{
+    text-transform: uppercase;
+}
 
 /*** Color system ***/
 :root{
@@ -95,4 +98,10 @@ button:hover{
     width: 25px;
     height: 25px;
     color: var(--light-text-color);
+}
+
+@media only screen and (max-width: 56.25em) {
+    main{
+        min-height: 100vh;
+    }
 }
