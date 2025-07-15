@@ -1,9 +1,17 @@
-import React from 'react';
-import certificates from '../data/certificates.json';
+import React, { useEffect, useState } from 'react';
+// import certificates from '../data/certificates.json';
+// import { getCertificates } from '../utils/getData';
+
 import styles from './About.module.css';
 import { Link } from 'react-router-dom';
 
 export default function About() {
+    const [certificates, setCertificates] = useState([])
+    useEffect(() => {
+        fetch('/data/certificates.json')
+            .then(res => res.json())
+            .then(data => setCertificates(data.certificates))
+    }, [])
     const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Python', 'PHP', 'Django', 'Object-Oriented Programming (OOP)', 'Bootstrap', 'SQL', 'JSON', 'Figma', 'Responsive UIs', 'Squarespace', 'Wix', 'Git', 'Github'];
     return (
         <main className='gradient'>
@@ -16,16 +24,16 @@ export default function About() {
                     <div className={styles.certificates}>
                         <h2>Certificates</h2>
                         <ul className={styles.certificatesLists}>
-                            {certificates.certificates.map(cert =>
+                            {certificates.map(cert =>
                                 <li key={cert.id}>
                                     <a href={cert.credential}>{cert.title}</a>
                                     <p className={styles.credentialDate}><span><b>{cert.organization}</b></span> - Issued {cert.issuedDate}</p>
                                 </li>)}
                         </ul>
                     </div>
-                    <div className={styles.skills}>
+                    <div className='skills'>
                         <h2>Skills</h2>
-                        <ul className={styles.skillsLists}>
+                        <ul className='skills-lists'>
                             {skills.map(skill => <li key={skill}>{skill}</li>)}
                         </ul>
                     </div>

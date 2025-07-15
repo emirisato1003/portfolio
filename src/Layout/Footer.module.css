@@ -13,7 +13,7 @@ footer{
 .footerTop{
     display: flex;
     justify-content: space-between;
-    padding: 8em 0em;
+    padding: 4em 0em;
 }
 
 .footerTop h4{

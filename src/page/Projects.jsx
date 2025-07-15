@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import projectsData from '../data/projects.json';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Projects.module.css'
+import styles from './Projects.module.css';
 
 export default function Projects() {
-    const [projects, setProjects] = useState(projectsData.projects);
-    const sortedProjects = projects.sort((a, b) => b.id - a.id)
-    console.log(sortedProjects)
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        fetch('/data/projects.json')
+            .then(res => res.json())
+            .then(data => setProjects(data.projects))
+    }, [])
+    const sortedProjects = projects.sort((a, b) => b.id - a.id);
+    // console.log(sortedProjects);
     const projectsEl = sortedProjects.map(project => (
         <article key={project.id} className={styles.projectContainer}>
             <div className={styles.projectImgContainer}>

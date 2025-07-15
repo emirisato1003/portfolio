@@ -1,0 +1,94 @@
+
+.projectHero{
+    color: var(--light-text-color);
+    margin: 0;
+}
+
+.heroContents{
+    /* width: 92%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10em 0;
+}
+
+.heroContents h1{
+    font-size: 5rem;
+    /* text-align: center; */
+}
+
+.heroDescription{
+    max-width: 50em;
+    margin: 3em auto 0 auto;
+}
+
+.heroDescription p{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.heroCta{
+    margin-top: 5em;
+}
+
+.heroCta button{
+    height: 3em;
+    width: 16em;
+    background-color: var(--background-color);
+    color: var(--dark-text-color);
+    font-size: 1.2rem;
+}
+
+.projectContents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80em;
+    margin: 0 auto;
+    padding-top: 5em;
+    padding-bottom: 7em;
+}
+
+.projectDetails{
+    max-width: 55em;
+}
+
+.projectContents h2{
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+
+.projectImgCont{
+    margin-bottom: 6em;
+}
+
+.projectImgCont img{
+    width: 100%;
+}
+
+.projectOverview{
+    margin-bottom: 7em;
+}
+
+.projectOverview p{
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: gray;
+    /* margin-bottom: 1em; */
+}
+
+.projectTools{
+    margin-bottom: 5em;
+}
+
+.projectTools ul > li{
+    background-color: rgba(153, 153, 153, 0.2);
+    color: #777;
+    padding: .5em 1em;
+}
+
+.demoLinks button{
+    margin-right: 1.2em;
+}
