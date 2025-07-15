@@ -249,7 +249,7 @@
             "context": "#FITLIFE is a fitness application built with native React. There are 1000+ exercises data in this application. users can see each workout's tutorials and access to the related workouts and additional video guidance through Youtube.",
             "description": "A fitness application that uses can access anywhere and anytime. Users can access tutorial videos and instructions. Mobile-responsive design.",
             "overview": "This fitness app helps users discover exercise tutorials and build their workout routines. Users can search for exercises in three ways: by exercise name, equipment type, or target muscle group. The app features a mobile-friendly design, making it perfect for use at the gym or any workout location. Whether you're planning your routine at home or need a quick tutorial reminder during your workout.",
-            "videos": [],
+            "videos": ["https://youtu.be/bUR4BO1kcDU?si=7G2kE00XEEEKOlzc"],
             "technologies": [
                 "HTML",
                 "CSS / CSS Modules",

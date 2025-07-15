@@ -39,9 +39,11 @@
 }
 
 .linkContents h2{
-    font-size: clamp(1.2rem, 3vh, 2rem);
-    margin-bottom: 2rem;
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    margin-bottom: 1.2rem;
     text-transform: capitalize;
+    color: var(--dark-text-color);
+    text-align: start;
 }
 
 .linkContents p{
@@ -50,6 +52,7 @@
     max-width: 60em;
     line-height: 1.7;
     margin-bottom: 3em;
+    text-align: start;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -59,5 +62,13 @@
     }
     .linkContents{
         align-items: center;
+    }
+
+    .linkContents h2{
+        margin-top: 1.1em;
+    }
+
+    .linkContents p{
+        text-align: center;
     }
 }

@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import styles from './Project.module.css';
 
 export default function Project() {
-    const listStyles = {justifyContent: 'flex-start'}
+    const listStyles = { justifyContent: 'flex-start' };
     const { id } = useParams();
     const [project, setProject] = useState([]);
     useEffect(() => {
@@ -15,6 +15,14 @@ export default function Project() {
             });
     }, [id]);
 
+    const getVideoUrl = () => {
+        if (project?.videos) {
+            const videoUrl = project.videos;
+            return videoUrl;
+        }
+    };
+    console.log(getVideoUrl());
+    const hasVideo = false
     return (
         <>
             <header className={`${styles.projectHero} gradient`}>
@@ -28,7 +36,7 @@ export default function Project() {
                     </div>
                 </div>
             </header>
-            <section>
+            <section className={styles.sectionCont}>
                 <Link to='/projects'>&larr; Back to projects List</Link>
                 <div className={styles.projectContents}>
                     <div className={styles.projectImgCont}>
@@ -39,12 +47,21 @@ export default function Project() {
                             <h2>Project Overview</h2>
                             <p>{project.overview}</p>
                         </div>
-                        <div className={styles.projectVideo}>
-                            <h2>Project Video</h2>
-                        </div>
-                        <div className={styles.projectTools} style={listStyles}>
+                        {hasVideo &&
+                            <div className={styles.projectVideoCont}>
+                                <h2>Project Video</h2>
+                                <iframe
+                                    src={getVideoUrl()}
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>}
+                        <div className={styles.projectTools}>
                             <h2>Tools Used</h2>
-                            <ul className='skills-lists'>
+                            <ul className='skills-lists' style={listStyles}>
                                 {project.technologies && project.technologies.map(tech => (
                                     <li key={tech}>{tech}</li>
                                 ))}
