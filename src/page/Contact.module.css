@@ -1,8 +1,4 @@
 
-.contact{
-    min-height: 56.7vh;
-}
-
 .contactContainer p{
     font-size: clamp(1rem, 3vh, 1.2rem);
     letter-spacing: 1px;

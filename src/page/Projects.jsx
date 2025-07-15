@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Projects.module.css';
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
+    const navigate = useNavigate();
+    
     useEffect(() => {
         fetch('/data/projects.json')
             .then(res => res.json())
-            .then(data => setProjects(data.projects))
-    }, [])
+            .then(data => setProjects(data.projects));
+    }, []);
     const sortedProjects = projects.sort((a, b) => b.id - a.id);
-    // console.log(sortedProjects);
+
     const projectsEl = sortedProjects.map(project => (
         <article key={project.id} className={styles.projectContainer}>
             <div className={styles.projectImgContainer}>
@@ -19,7 +21,7 @@ export default function Projects() {
             <div className={styles.linkContents}>
                 <h2>{project.title}</h2>
                 <p>{project.context}</p>
-                <Link to={`/projects/${project.id}`}><button>learn more</button></Link>
+                <button onClick={() => navigate(`/projects/${project.id}`)} aria-label='learn more'>learn more</button>
             </div>
         </article>
     )
@@ -27,13 +29,13 @@ export default function Projects() {
 
     return (
         <>
-            <section className='main-container'>
-                <div className={`${styles.projectHeading} heading`}>
+            <main className='main-container'>
+                <header className={`${styles.projectHeading} heading`}>
                     <h1>Projects</h1>
-                    <span>All my projects include links to the code or/and live version. Click the button to learn more about each one.</span>
-                </div>
+                    <p>All my projects include links to the code or/and live version. Click the button to learn more about each one.</p>
+                </header>
                 {projectsEl}
-            </section>
+            </main>
         </>
     );
 }

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import styles from './Project.module.css';
 
 export default function Project() {
+    const listStyles = {justifyContent: 'flex-start'}
     const { id } = useParams();
     const [project, setProject] = useState([]);
     useEffect(() => {
@@ -41,7 +42,7 @@ export default function Project() {
                         <div className={styles.projectVideo}>
                             <h2>Project Video</h2>
                         </div>
-                        <div className={styles.projectTools}>
+                        <div className={styles.projectTools} style={listStyles}>
                             <h2>Tools Used</h2>
                             <ul className='skills-lists'>
                                 {project.technologies && project.technologies.map(tech => (

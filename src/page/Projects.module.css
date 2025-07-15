@@ -1,9 +1,15 @@
+
 .projectHeading{
     text-align: center;
     margin-bottom: 10em;
+    width: 100%;
 }
 
-.projectHeading span{
+.projectHeading h1{
+    color: var(--dark-text-color);
+}
+
+.projectHeading p{
     color: #777;
     font-size: 1.2rem;
 }
