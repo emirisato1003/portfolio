@@ -69,9 +69,21 @@
             "description": "There are three demo videos for projects: Wiki, Mail, and Network. These apps are built with Python, JavaScript, and SQL using frameworks like Django and Bootstrap.",
             "overview": "These projects are bases on CS50's Web Programming with python and JavaScript. The course topics include database design, scalability, security, and user experience. There are three videos of the main projects: wiki, Mail, and Network.",
             "videos": [
-                "https://youtu.be/bzF4tCd12as",
-                "https://youtu.be/3ZA4oWJpSt0",
-                "https://youtu.be/5L8lh1Vgoa0"
+                {
+                    "id": 1,
+                    "title": "Harvard CS50 Web Project 1 | Wiki",
+                    "url": "https://www.youtube.com/embed/bzF4tCd12as?si=VZcQv8ep18zk_rBf"
+                },
+                {
+                    "id": 2,
+                    "title": "Harvard CS50w Project 3 | Mail",
+                    "url": "https://www.youtube.com/embed/3ZA4oWJpSt0?si=bO6WsnXziHA9vebx"
+                },
+                {
+                    "id": 3,
+                    "title": "Harvard CS50 Web Project 4 | Network",
+                    "url": "https://www.youtube.com/embed/5L8lh1Vgoa0?si=Lo9mjNEiyDWb6rgB"
+                }
             ],
             "technologies": [
                 "HTML",
@@ -98,7 +110,11 @@
             "description": "This project is a Django-based social media web application that allows users to create profiles, make posts, follow other users, and interact with content through likes and saves.",
             "overview": "This project features advanced user interactions, including a dynamic following/follower system and post engagement options such as likes and saves. Users have custom profiles with details. The platform also offers comprehensive post management, allowing users to create and edit content. With a responsive design that blends server-side rendering and client-side interactivity, the application ensures a smooth and engaging user experience.",
             "videos": [
-                "https://youtu.be/ztySOiZp678"
+                {
+                    "id": 1,
+                    "title": "Harvard CS50 Web Final Project | Visualist",
+                    "url": "https://www.youtube.com/embed/ztySOiZp678?si=--jIwyF1v05-xikU"
+                }
             ],
             "technologies": [
                 "HTML",
@@ -125,7 +141,11 @@
             "description": "This project is an implementation of an auction site using Django. The project includes an app called auctions that enables users to create, bid, and comment on auction listings.",
             "overview": "This application is an online auction platform built with Django. It allows users to create, bid on, and comment on auction listings. Key features include user authentication, a dynamic watchlist, category-based listing organization, and an admin interface for managing listings, bids, and comments. The platform ensures seamless interaction for buyers and sellers in a user-friendly environment.",
             "videos": [
-                "https://youtu.be/rayOGJJA_H0"
+                {
+                    "id": 1,
+                    "title": "Harvard CS50 Web Project 2 | Commerce",
+                    "url": "https://www.youtube.com/embed/rayOGJJA_H0?si=FQcBGAthiJlclqXb"
+                }
             ],
             "technologies": [
                 "HTML",
@@ -232,7 +252,7 @@
                 "REST API",
                 "API",
                 "React Router",
-                "Environment Variables", 
+                "Environment Variables",
                 "GIT",
                 "GitHub",
                 "Responsive Design"
@@ -249,7 +269,13 @@
             "context": "#FITLIFE is a fitness application built with native React. There are 1000+ exercises data in this application. users can see each workout's tutorials and access to the related workouts and additional video guidance through Youtube.",
             "description": "A fitness application that uses can access anywhere and anytime. Users can access tutorial videos and instructions. Mobile-responsive design.",
             "overview": "This fitness app helps users discover exercise tutorials and build their workout routines. Users can search for exercises in three ways: by exercise name, equipment type, or target muscle group. The app features a mobile-friendly design, making it perfect for use at the gym or any workout location. Whether you're planning your routine at home or need a quick tutorial reminder during your workout.",
-            "videos": ["https://youtu.be/bUR4BO1kcDU?si=7G2kE00XEEEKOlzc"],
+            "videos": [
+                {
+                    "id": 1,
+                    "title": "CTD React course Final Project | #FITLIFE (Fitness Application)",
+                    "url": "https://www.youtube.com/embed/bUR4BO1kcDU?si=8sr5NjrOVXfsC-wt"
+                }
+            ],
             "technologies": [
                 "HTML",
                 "CSS / CSS Modules",

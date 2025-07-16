@@ -6,6 +6,7 @@ export default function Project() {
     const listStyles = { justifyContent: 'flex-start' };
     const { id } = useParams();
     const [project, setProject] = useState([]);
+
     useEffect(() => {
         fetch('/data/projects.json')
             .then(res => res.json())
@@ -15,14 +16,17 @@ export default function Project() {
             });
     }, [id]);
 
-    const getVideoUrl = () => {
-        if (project?.videos) {
-            const videoUrl = project.videos;
-            return videoUrl;
-        }
-    };
-    console.log(getVideoUrl());
-    const hasVideo = false
+    const videoEl = project.videos && project.videos.map(video => (
+        <div key={video.id} className={styles.videoFrame}>
+            <iframe
+                src={video.url}
+                frameBorder="0"
+                title='Youtube video player'
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            />
+        </div>
+    ));
     return (
         <>
             <header className={`${styles.projectHero} gradient`}>
@@ -37,7 +41,9 @@ export default function Project() {
                 </div>
             </header>
             <section className={styles.sectionCont}>
-                <Link to='/projects'>&larr; Back to projects List</Link>
+                <div className={styles.goBackLink}>
+                    <Link to='/projects'>&larr; Back to projects List</Link>
+                </div>
                 <div className={styles.projectContents}>
                     <div className={styles.projectImgCont}>
                         <img src={`/${project.thumbnail}`} alt={`${project.title}`} />
@@ -47,18 +53,15 @@ export default function Project() {
                             <h2>Project Overview</h2>
                             <p>{project.overview}</p>
                         </div>
-                        {hasVideo &&
+                        {project.videos && project.videos.length > 0 &&
                             <div className={styles.projectVideoCont}>
                                 <h2>Project Video</h2>
-                                <iframe
-                                    src={getVideoUrl()}
-                                    title="YouTube video player"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin"
-                                    allowFullScreen>
-                                </iframe>
-                            </div>}
+                                {
+                                    project.videos ? videoEl
+                                        : "loading..."
+                                }
+                            </div>
+                        }
                         <div className={styles.projectTools}>
                             <h2>Tools Used</h2>
                             <ul className='skills-lists' style={listStyles}>
