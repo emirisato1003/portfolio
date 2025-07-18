@@ -55,6 +55,43 @@
     text-align: start;
 }
 
+.pagination{
+    display: flex;
+    margin-bottom: 2em;
+}
+
+button.paginationBtn{
+    box-shadow: none;
+    padding: 12px;
+    margin-inline: 6px;
+    width: auto;
+    border-radius: 50%;
+}
+
+button.paginationBtn .paginationArrow{
+    font-size: 1.2rem;
+}
+
+button.pageNumber{
+    background: none;
+    color: var(--dark-text-color);
+    box-shadow: none;
+    padding-inline: 15px;
+    margin-inline: 6px;
+    width: auto;
+    border-radius: 50%;
+    border: 1px solid #777;
+}
+
+button.selected{
+    background-color: #6ba3d47e;
+}
+
+button.pageNumber:hover{
+    transform: none;
+    background-color: #87bdeca1;
+}
+
 @media only screen and (max-width: 56.25em) {
     .projectContainer{
         grid-template-columns: 1fr;
