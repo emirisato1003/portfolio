@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import styles from './Projects.module.css';
 
 // react icon
@@ -10,12 +10,15 @@ export default function Projects() {
     const [projects, setProjects] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
+    const paginationRef = useRef(null);
+    const location = useLocation()
 
     useEffect(() => {
         fetch('/data/projects.json')
             .then(res => res.json())
             .then(data => setProjects(data.projects));
     }, []);
+
     const sortedProjects = projects.sort((a, b) => b.id - a.id);
 
     /*** Pagination ***/
@@ -27,6 +30,10 @@ export default function Projects() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = currentPage * itemsPerPage;
     const currentItems = sortedProjects.slice(startIndex, endIndex);
+
+    useEffect(() => {
+        paginationRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, [currentPage, location.pathname]);
 
     const handleNextPage = () => {
         setSearchParams({ page: currentPage + 1 });
@@ -40,6 +47,7 @@ export default function Projects() {
         setSearchParams({ page: n });
     };
 
+    const navigateOption = { state: { page: currentPage } };
     const projectsEl = currentItems.map(project => (
         <article key={project.id} className={styles.projectContainer}>
             <div className={styles.projectImgContainer}>
@@ -48,7 +56,7 @@ export default function Projects() {
             <div className={styles.linkContents}>
                 <h2>{project.title}</h2>
                 <p>{project.context}</p>
-                <button onClick={() => navigate(`/projects/${project.id}`)} aria-label='learn more'>learn more</button>
+                <button onClick={() => navigate(`/projects/${project.id}`, navigateOption)} aria-label='learn more'>learn more</button>
             </div>
         </article>
     )
@@ -57,24 +65,64 @@ export default function Projects() {
     return (
         <>
             <main className='main-container'>
-                <header className={`${styles.projectHeading} heading`}>
+                <header className={`${styles.projectHeading} heading`} ref={paginationRef}>
                     <h1>Projects</h1>
                     <p>All my projects include links to the code or/and live version. Click the button to learn more about each one.</p>
                 </header>
                 <div className={styles.pagination}>
-                    <button aria-label='pagination previous button' disabled={currentPage === 1} onClick={handlePreviousPage} className={styles.paginationBtn}><IoIosArrowBack className={styles.paginationArrow} /></button>
+                    <button
+                        aria-label='pagination previous button'
+                        disabled={currentPage === 1} onClick={handlePreviousPage}
+                        className={styles.paginationBtn}>
+                        <IoIosArrowBack
+                            className={styles.paginationArrow} />
+                    </button>
+
                     {[...Array(totalPages)].map((_, i) => (
-                        <button key={i} className={`${styles.pageNumber} ${currentPage === i + 1 ? styles.selected : ''}`} aria-label='page number button' onClick={() => handlePage(i + 1)}>{i + 1}</button>
+                        <button
+                            key={i}
+                            className={`${styles.pageNumber} ${currentPage === i + 1 ? styles.selected : ''}`}
+                            aria-label='page number button'
+                            onClick={() => handlePage(i + 1)}>
+                            {i + 1}
+                        </button>
                     ))}
-                    <button aria-label='pagination next button' disabled={currentPage === totalPages} onClick={handleNextPage} className={styles.paginationBtn}><IoIosArrowForward className={styles.paginationArrow} /></button>
+                    <button
+                        aria-label='pagination next button'
+                        disabled={currentPage === totalPages}
+                        onClick={handleNextPage}
+                        className={styles.paginationBtn}>
+                        <IoIosArrowForward
+                            className={styles.paginationArrow} />
+                    </button>
                 </div>
                 {projectsEl}
-                <div className={styles.pagination}>
-                    <button aria-label='pagination previous button' disabled={currentPage === 1} onClick={handlePreviousPage} className={styles.paginationBtn}><IoIosArrowBack className={styles.paginationArrow} /></button>
+                <div
+                    className={styles.pagination}>
+                    <button
+                        aria-label='pagination previous button'
+                        disabled={currentPage === 1} onClick={handlePreviousPage}
+                        className={styles.paginationBtn}>
+                        <IoIosArrowBack
+                            className={styles.paginationArrow} />
+                    </button>
                     {[...Array(totalPages)].map((_, i) => (
-                        <button key={i} className={`${styles.pageNumber} ${currentPage === i + 1 ? styles.selected : ''}`} aria-label='page number button' onClick={() => handlePage(i + 1)}>{i + 1}</button>
+                        <button
+                            key={i}
+                            className={`${styles.pageNumber} ${currentPage === i + 1 ? styles.selected : ''}`}
+                            aria-label='page number button'
+                            onClick={() => handlePage(i + 1)}>
+                            {i + 1}
+                        </button>
                     ))}
-                    <button aria-label='pagination next button' disabled={currentPage === totalPages} onClick={handleNextPage} className={styles.paginationBtn}><IoIosArrowForward className={styles.paginationArrow} /></button>
+                    <button
+                        aria-label='pagination next button'
+                        disabled={currentPage === totalPages}
+                        onClick={handleNextPage}
+                        className={styles.paginationBtn}>
+                        <IoIosArrowForward
+                            className={styles.paginationArrow} />
+                    </button>
                 </div>
             </main>
         </>

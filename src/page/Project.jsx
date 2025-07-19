@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import styles from './Project.module.css';
 
 export default function Project() {
     const listStyles = { justifyContent: 'flex-start' };
     const { id } = useParams();
     const [project, setProject] = useState([]);
-
+    const location = useLocation();
+    const projectHeaderRef = useRef(null);
     useEffect(() => {
         fetch('/data/projects.json')
             .then(res => res.json())
@@ -14,6 +15,7 @@ export default function Project() {
                 const foundProject = data.projects.filter(item => item.id == id);
                 setProject(foundProject[0]);
             });
+        projectHeaderRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, [id]);
 
     const videoEl = project.videos && project.videos.map(video => (
@@ -29,7 +31,7 @@ export default function Project() {
     ));
     return (
         <>
-            <header className={`${styles.projectHero} gradient`}>
+            <header className={`${styles.projectHero} gradient`} ref={projectHeaderRef}>
                 <div className={styles.heroContents}>
                     <h1>{project.title}</h1>
                     <div className={styles.heroDescription}>
@@ -41,9 +43,6 @@ export default function Project() {
                 </div>
             </header>
             <section className={styles.sectionCont}>
-                <div className={styles.goBackLink}>
-                    <Link to='/projects'>&larr; Back to projects List</Link>
-                </div>
                 <div className={styles.projectContents}>
                     <div className={styles.projectImgCont}>
                         <img src={`/${project.thumbnail}`} alt={`${project.title}`} />
@@ -76,6 +75,9 @@ export default function Project() {
                                 {project.liveUrl && <a href={project.liveUrl} target='_blank'><button>Live Link</button></a>}
                                 <a href={project.githubUrl} target='_blank'><button>Code link</button></a>
                             </div>
+                        </div>
+                        <div className={styles.goBackLink}>
+                            <Link to={`/projects?page=${location?.state.page}`}>&larr; Back to projects List</Link>
                         </div>
                     </div>
                 </div>

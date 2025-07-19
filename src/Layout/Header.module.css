@@ -1,6 +1,6 @@
 header{
     margin-inline: 1.6em;
-    margin-block: 1em;
+    padding-block: 1em;
 }
 
 nav{
@@ -16,7 +16,6 @@ nav{
     cursor: pointer;
     gap: 10px;
     transition: color .3s;
-    margin: 6px 10px 0 0;
 }
 
 a.logoContainer{
@@ -46,22 +45,82 @@ a.logoContainer{
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: 1.1rem;
+    font-size: 1.2rem
 }
 
-.headerNav{
-    display: flex;
-    gap: 5em;
+.hamburgerListContainer{
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgerNavLists{
+    display: none;
+}
+
+.navLists{
     font-weight: 700;
     text-transform: uppercase;
+    transition: .3s;
+
 }
 
-
-.headerNav a{
+.navLists a{
     color: var(--dark-text-color);
     text-decoration: none;
+    padding-inline-start: 2.5em;
+    font-size: 1.1rem;
 }
 
 .headerNav a:hover{
     color: var(--primary-color);
+}
+
+@media only screen and (max-width: 56.25em) {
+    .logoSub{
+        font-size: 1rem;
+    }
+    .navLists a{
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 40.25em) {
+    header{
+        padding-bottom: 0;
+        margin: 0;
+    }
+    .logoContainer{
+        margin-bottom: 1em;
+        padding-left: 1em;
+    }
+
+    .headerNav{
+        display: none;
+    }
+
+    .hamburgerListContainer{
+        display: block;
+        font-size: 2rem;
+        padding-right: .5em;
+    }
+
+    .hamburgerNavLists{
+        width: 100%;
+        display: block;
+    }
+
+    .navLists{
+        margin-top: 1.5em;
+        text-align: end;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+
+    .navLists a{
+        padding: 1em;
+        z-index: 3;
+        border-top: 1px solid rgb(238, 238, 238);
+    }
 }
