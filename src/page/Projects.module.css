@@ -14,10 +14,6 @@
     font-size: 1.2rem;
 }
 
-.filterForm{
-    width: 30em;
-}
-
 .projectContainer{
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -59,10 +55,28 @@
     text-align: start;
 }
 
+.searchContainer{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
 .pagination{
     display: flex;
-    margin-bottom: 2em;
+    justify-self: center;
+    margin-left: 10em;
 }
+
+.searchContainer form{
+    justify-self: flex-end;
+}
+
+.searchContainer form > select{
+    width: 160px;
+}
+
 
 button.paginationBtn{
     box-shadow: none;
@@ -83,12 +97,13 @@ button.pageNumber{
     padding-inline: 15px;
     margin-inline: 6px;
     width: auto;
-    border-radius: 50%;
-    border: 1px solid #777;
+    /* border-radius: 50%; */
+    /* border: 1px solid #777; */
 }
 
 button.selected{
-    background-color: #6ba3d47e;
+    background-color: #c1d6e97e;
+    text-decoration: underline;
 }
 
 button.pageNumber:hover{
@@ -111,5 +126,20 @@ button.pageNumber:hover{
 
     .linkContents p{
         text-align: center;
+    }
+
+    .searchContainer{
+        grid-template-columns: 1fr
+    }
+
+    .pagination{
+    display: flex;
+    justify-self: center;
+    margin-left: 0;
+    }
+
+    .searchContainer form{
+    margin-top: 2.3em;
+    justify-self: center;
     }
 }

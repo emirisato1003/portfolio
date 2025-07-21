@@ -7,9 +7,11 @@ import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 
 export default function Projects() {
+
     const [projects, setProjects] = useState([]);
     const [_, setTechnology] = useState('all');
     const [searchParams, setSearchParams] = useSearchParams();
+
     const navigate = useNavigate();
     const paginationRef = useRef(null);
     const location = useLocation();
@@ -19,11 +21,12 @@ export default function Projects() {
             .then(res => res.json())
             .then(data => setProjects(data.projects));
     }, []);
+
     const techs = projects.map(i => i.technologies).flat();
     const techArrays = Array.from(new Set(techs));
 
-    const techFilter = searchParams.get('tech') || 'all'
-    const filteredProjects = projects.filter(project => techFilter === 'all' ? projects : project.technologies.includes(techFilter))
+    const techFilter = searchParams.get('tech') || 'all';
+    const filteredProjects = projects.filter(project => techFilter === 'all' ? projects : project.technologies.includes(techFilter));
     const sortedProjects = filteredProjects.sort((a, b) => b.id - a.id);
 
     /*** Pagination ***/
@@ -35,7 +38,7 @@ export default function Projects() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = currentPage * itemsPerPage;
     const currentItems = sortedProjects.slice(startIndex, endIndex);
-    
+
     useEffect(() => {
         paginationRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, [currentPage, location.pathname]);
@@ -55,10 +58,11 @@ export default function Projects() {
     const handleChange = (e) => {
         e.preventDefault();
         setTechnology(e.target.value);
-        setSearchParams({page: '1', tech: e.target.value})
+        setSearchParams({ page: '1', tech: e.target.value });
     };
 
     const navigateOption = { state: { page: currentPage, tech: techFilter } };
+
     const projectsEl = currentItems.map(project => (
         <article key={project.id} className={styles.projectContainer}>
             <div className={styles.projectImgContainer}>
@@ -80,42 +84,42 @@ export default function Projects() {
                     <h1>Projects</h1>
                     <p>All my projects include links to the code or/and live version. Click the button to learn more about each one.</p>
                 </header>
-                <div className={styles.filterForm}>
+                <div className={styles.searchContainer}>
+                    <div className={styles.pagination}>
+                        <button
+                            aria-label='pagination previous button'
+                            disabled={currentPage === 1} onClick={handlePreviousPage}
+                            className={styles.paginationBtn}>
+                            <IoIosArrowBack
+                                className={styles.paginationArrow} />
+                        </button>
+
+                        {[...Array(totalPages)].map((_, i) => (
+                            <button
+                                key={i}
+                                className={`${styles.pageNumber} ${currentPage === i + 1 ? styles.selected : ''}`}
+                                aria-label='page number button'
+                                onClick={() => handlePage(i + 1)}>
+                                {i + 1}
+                            </button>
+                        ))}
+                        <button
+                            aria-label='pagination next button'
+                            disabled={currentPage === totalPages}
+                            onClick={handleNextPage}
+                            className={styles.paginationBtn}>
+                            <IoIosArrowForward
+                                className={styles.paginationArrow} />
+                        </button>
+                    </div>
                     <form>
                         <select onChange={handleChange}>
-                            <option value={techFilter}>{techFilter}</option>
+                            <option value='all'>all</option>
                             {techArrays.map(tech => (
-                                <option key={tech} value={tech}>{tech}</option>
+                                <option key={tech} value={tech} selected={techFilter === tech}>{tech}</option>
                             ))}
                         </select>
                     </form>
-                </div>
-                <div className={styles.pagination}>
-                    <button
-                        aria-label='pagination previous button'
-                        disabled={currentPage === 1} onClick={handlePreviousPage}
-                        className={styles.paginationBtn}>
-                        <IoIosArrowBack
-                            className={styles.paginationArrow} />
-                    </button>
-
-                    {[...Array(totalPages)].map((_, i) => (
-                        <button
-                            key={i}
-                            className={`${styles.pageNumber} ${currentPage === i + 1 ? styles.selected : ''}`}
-                            aria-label='page number button'
-                            onClick={() => handlePage(i + 1)}>
-                            {i + 1}
-                        </button>
-                    ))}
-                    <button
-                        aria-label='pagination next button'
-                        disabled={currentPage === totalPages}
-                        onClick={handleNextPage}
-                        className={styles.paginationBtn}>
-                        <IoIosArrowForward
-                            className={styles.paginationArrow} />
-                    </button>
                 </div>
                 {projectsEl}
                 <div
