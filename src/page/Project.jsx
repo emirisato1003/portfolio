@@ -8,6 +8,7 @@ export default function Project() {
     const [project, setProject] = useState([]);
     const location = useLocation();
     const projectHeaderRef = useRef(null);
+    console.log(location)
     useEffect(() => {
         fetch('/data/projects.json')
             .then(res => res.json())
@@ -77,7 +78,7 @@ export default function Project() {
                             </div>
                         </div>
                         <div className={styles.goBackLink}>
-                            <Link to={`/projects?page=${location?.state.page}`}>&larr; Back to projects List</Link>
+                            <Link to={`/projects?page=${location?.state.page}&tech=${location?.state.tech}`}>&larr; Back to projects List</Link>
                         </div>
                     </div>
                 </div>

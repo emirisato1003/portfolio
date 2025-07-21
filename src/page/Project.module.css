@@ -108,11 +108,14 @@
 }
 
 .demoLinks button{
-    margin-right: 1.2em;
+    margin-inline-end: 10px;
 }
 
 @media only screen and (max-width: 56.25em) {
     .projectDetails{
         max-width: 90%;
+}
+.demoLinks button{
+    margin-block-end: 10px;
 }
 }

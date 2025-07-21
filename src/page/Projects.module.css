@@ -1,7 +1,7 @@
 
 .projectHeading{
     text-align: center;
-    margin-bottom: 10em;
+    margin-bottom: 4em;
     width: 100%;
 }
 
@@ -12,6 +12,10 @@
 .projectHeading p{
     color: #777;
     font-size: 1.2rem;
+}
+
+.filterForm{
+    width: 30em;
 }
 
 .projectContainer{

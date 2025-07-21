@@ -8,18 +8,23 @@ import { IoIosArrowBack } from "react-icons/io";
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
+    const [_, setTechnology] = useState('all');
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
     const paginationRef = useRef(null);
-    const location = useLocation()
+    const location = useLocation();
 
     useEffect(() => {
         fetch('/data/projects.json')
             .then(res => res.json())
             .then(data => setProjects(data.projects));
     }, []);
+    const techs = projects.map(i => i.technologies).flat();
+    const techArrays = Array.from(new Set(techs));
 
-    const sortedProjects = projects.sort((a, b) => b.id - a.id);
+    const techFilter = searchParams.get('tech') || 'all'
+    const filteredProjects = projects.filter(project => techFilter === 'all' ? projects : project.technologies.includes(techFilter))
+    const sortedProjects = filteredProjects.sort((a, b) => b.id - a.id);
 
     /*** Pagination ***/
     const itemsPerPage = 3;
@@ -30,24 +35,30 @@ export default function Projects() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = currentPage * itemsPerPage;
     const currentItems = sortedProjects.slice(startIndex, endIndex);
-
+    
     useEffect(() => {
         paginationRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, [currentPage, location.pathname]);
 
     const handleNextPage = () => {
-        setSearchParams({ page: currentPage + 1 });
+        setSearchParams({ page: currentPage + 1, tech: techFilter });
     };
 
     const handlePreviousPage = () => {
-        setSearchParams({ page: currentPage - 1 });
+        setSearchParams({ page: currentPage - 1, tech: techFilter });
     };
 
     const handlePage = (n) => {
-        setSearchParams({ page: n });
+        setSearchParams({ page: n, tech: techFilter });
     };
 
-    const navigateOption = { state: { page: currentPage } };
+    const handleChange = (e) => {
+        e.preventDefault();
+        setTechnology(e.target.value);
+        setSearchParams({page: '1', tech: e.target.value})
+    };
+
+    const navigateOption = { state: { page: currentPage, tech: techFilter } };
     const projectsEl = currentItems.map(project => (
         <article key={project.id} className={styles.projectContainer}>
             <div className={styles.projectImgContainer}>
@@ -69,6 +80,16 @@ export default function Projects() {
                     <h1>Projects</h1>
                     <p>All my projects include links to the code or/and live version. Click the button to learn more about each one.</p>
                 </header>
+                <div className={styles.filterForm}>
+                    <form>
+                        <select onChange={handleChange}>
+                            <option value={techFilter}>{techFilter}</option>
+                            {techArrays.map(tech => (
+                                <option key={tech} value={tech}>{tech}</option>
+                            ))}
+                        </select>
+                    </form>
+                </div>
                 <div className={styles.pagination}>
                     <button
                         aria-label='pagination previous button'
