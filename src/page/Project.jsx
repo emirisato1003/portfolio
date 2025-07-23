@@ -78,7 +78,7 @@ export default function Project() {
                             </div>
                         </div>
                         <div className={styles.goBackLink}>
-                            <Link to={`/projects?page=${location?.state.page}&tech=${location?.state.tech}`}>&larr; Back to projects List</Link>
+                            <Link to={location?.state ? `/projects?page=${location?.state.page}&tech=${location?.state.tech}` : '..'}>&larr; Back to {location?.state ? 'projects Lists' : 'Home page'}</Link>
                         </div>
                     </div>
                 </div>
