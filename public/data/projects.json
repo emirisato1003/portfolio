@@ -130,7 +130,7 @@
             ],
             "liveUrl": "",
             "githubUrl": "https://github.com/emirisato1003/Social_media_app.git",
-            "pageImage": "/images/project1.jpg",
+            "pageImage": "images/pageImages/visualist-head-image.png",
             "thumbnail": "images/social_media_app_screenshots.png",
             "featured": true
         },
@@ -161,7 +161,7 @@
             ],
             "liveUrl": "",
             "githubUrl": "https://github.com/emirisato1003/Auction_cs50w.git",
-            "pageImage": "/images/project1.jpg",
+            "pageImage": "images/pageImages/auction_head_image.jpg",
             "thumbnail": "images/auction_screenshots.jpg",
             "featured": true
         },
@@ -185,7 +185,7 @@
             ],
             "liveUrl": "https://chef-claude-recipe-app.netlify.app/",
             "githubUrl": "https://github.com/emirisato1003/Chef-Claude-app.git",
-            "pageImage": "/images/project1.jpg",
+            "pageImage": "images/pageImages/chefClaude.png",
             "thumbnail": "images/chef-claude-app-screenshots.png",
             "featured": true
         },
@@ -259,7 +259,7 @@
             ],
             "liveUrl": "https://todo-list-neon-seven-17.vercel.app/",
             "githubUrl": "https://github.com/emirisato1003/todo-list.git",
-            "pageImage": "/images/project1.jpg",
+            "pageImage": "images/pageImages/todoapp.png",
             "thumbnail": "images/todoList.png",
             "featured": true
         },
@@ -293,7 +293,7 @@
             ],
             "liveUrl": "https://jay-fitness-app.vercel.app/",
             "githubUrl": "https://github.com/emirisato1003/jay-fitness-app.git",
-            "pageImage": "/images/project1.jpg",
+            "pageImage": "images/pageImages/fitlife.png",
             "thumbnail": "images/fitlife.png",
             "featured": true
         }
